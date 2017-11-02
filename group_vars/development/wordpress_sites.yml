@@ -1,0 +1,19 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  affinitymws.com:
+    site_hosts:
+      - canonical: affinitymws.dev
+        redirects:
+          - www.affinitymws.dev
+    local_path: ../affinitymws.com # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: affinitymwsolutions@gmail.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: self-signed
+    cache:
+      enabled: false
