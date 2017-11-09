@@ -3,6 +3,7 @@
 # Define accompanying passwords/secrets in group_vars/production/vault.yml
 
 wordpress_sites:
+
   affinitymws.com:
     site_hosts:
       - canonical: affinitymws.com
@@ -11,6 +12,23 @@ wordpress_sites:
     local_path: ../affinitymws.com # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:andrewexton373/affinitymws.com.git # replace with your Git repo URL
     repo_subtree_path: affinitymws.com # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: false
+
+  tammychau.com:
+    site_hosts:
+      - canonical: tammychau.affinitymws.com
+        redirects:
+          - www.tammychau.affinitymws.com
+    local_path: ../tammychau.com # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:affinitymwsolutions/AFFINITY_TRELLIS.git # replace with your Git repo URL
+    repo_subtree_path: tammychau.com # relative path to your Bedrock/WP directory in your repo
     branch: master
     multisite:
       enabled: false
