@@ -27,8 +27,7 @@ wordpress_sites:
         redirects:
           - www.tammychau.affinitymws.com
     local_path: ../tammychau.com # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:affinitymwsolutions/AFFINITY_TRELLIS.git # replace with your Git repo URL
-    repo_subtree_path: tammychau.com # relative path to your Bedrock/WP directory in your repo
+    repo: git@github.com:affinitymwsolutions/tammychau.com.git # replace with your Git repo URL
     branch: master
     multisite:
       enabled: false
