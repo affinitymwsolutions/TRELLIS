@@ -3,12 +3,28 @@
 # Define accompanying passwords/secrets in group_vars/development/vault.yml
 
 wordpress_sites:
+
   affinitymws.com:
     site_hosts:
       - canonical: affinitymws.dev
         redirects:
           - www.affinitymws.dev
     local_path: ../affinitymws.com # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: affinitymwsolutions@gmail.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: self-signed
+    cache:
+      enabled: false
+
+  tammychau.com:
+    site_hosts:
+      - canonical: tammychau.dev
+        redirects:
+          - www.tammychau.dev
+    local_path: ../tammychau.com # path targeting local Bedrock site directory (relative to Ansible root)
     admin_email: affinitymwsolutions@gmail.com
     multisite:
       enabled: false
