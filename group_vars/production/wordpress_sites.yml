@@ -10,8 +10,7 @@ wordpress_sites:
         redirects:
           - www.affinitymws.com
     local_path: ../affinitymws.com # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:andrewexton373/affinitymws.com.git # replace with your Git repo URL
-    repo_subtree_path: affinitymws.com # relative path to your Bedrock/WP directory in your repo
+    repo: git@github.com:affinitymwsolutions/affinitymws.com.git # replace with your Git repo URL
     branch: master
     multisite:
       enabled: false
@@ -28,6 +27,22 @@ wordpress_sites:
           - www.tammychau.affinitymws.com
     local_path: ../tammychau.com # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:affinitymwsolutions/tammychau.com.git # replace with your Git repo URL
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: false
+
+  cannabisriskconsulting.com:
+    site_hosts:
+      - canonical: cannabisriskconsulting.affinitymws.com
+        redirects:
+          - www.cannabisriskconsulting.affinitymws.com
+    local_path: ../cannabisriskconsulting.com # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:affinitymwsolutions/cannabisriskconsulting.com.git # replace with your Git repo URL
     branch: master
     multisite:
       enabled: false

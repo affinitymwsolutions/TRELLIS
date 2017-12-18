@@ -14,3 +14,8 @@ vault_wordpress_sites:
     admin_password: admin
     env:
       db_password: password
+
+  cannabisriskconsulting.com:
+    admin_password: admin
+    env:
+      db_password: password

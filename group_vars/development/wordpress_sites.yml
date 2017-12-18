@@ -33,3 +33,18 @@ wordpress_sites:
       provider: self-signed
     cache:
       enabled: false
+
+  cannabisriskconsulting.com:
+    site_hosts:
+      - canonical: cannabisriskconsulting.dev
+        redirects:
+          - www.cannabisriskconsulting.dev
+    local_path: ../cannabisriskconsulting.com # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: affinitymwsolutions@gmail.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: self-signed
+    cache:
+      enabled: false
