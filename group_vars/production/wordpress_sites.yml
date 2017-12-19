@@ -38,9 +38,9 @@ wordpress_sites:
 
   cannabisriskconsulting.com:
     site_hosts:
-      - canonical: cannabisriskconsulting.affinitymws.com
+      - canonical: cannabisriskconsulting.com
         redirects:
-          - www.cannabisriskconsulting.affinitymws.com
+          - www.cannabisriskconsulting.com
     local_path: ../cannabisriskconsulting.com # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:affinitymwsolutions/cannabisriskconsulting.com.git # replace with your Git repo URL
     branch: master
