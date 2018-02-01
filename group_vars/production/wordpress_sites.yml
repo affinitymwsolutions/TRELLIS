@@ -51,3 +51,19 @@ wordpress_sites:
       provider: letsencrypt
     cache:
       enabled: false
+
+  ex10n.com:
+    site_hosts:
+      - canonical: ex10n.affinitymws.com
+        redirects:
+          - www.ex10n.affinitymws.com
+    local_path: ../ex10n.com # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@git.affinitymws.com:andrewexton/ex10n.com.git # replace with your Git repo URL
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: false

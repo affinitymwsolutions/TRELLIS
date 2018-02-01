@@ -48,3 +48,18 @@ wordpress_sites:
       provider: self-signed
     cache:
       enabled: false
+
+  ex10n.com:
+    site_hosts:
+      - canonical: ex10n.dev
+        redirects:
+          - www.ex10n.dev
+    local_path: ../ex10n.com # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: andrewexton373@gmail.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: self-signed
+    cache:
+      enabled: false

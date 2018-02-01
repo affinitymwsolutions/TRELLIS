@@ -19,3 +19,8 @@ vault_wordpress_sites:
     admin_password: admin
     env:
       db_password: password
+
+  ex10n.com:
+    admin_password: admin
+    env:
+      db_password: password
